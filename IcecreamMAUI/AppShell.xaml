@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="IcecreamMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:IcecreamMAUI"
+    xmlns:pages="clr-namespace:IcecreamMAUI.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="IcecreamMAUI">
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+    <ShellContent ContentTemplate="{DataTemplate pages:Onboarding}" Shell.FlyoutBehavior="Disabled" />
+
+    <TabBar>
+        <ShellContent 
+            Title="Home"
+            ContentTemplate="{DataTemplate pages:HomePage}"
+            Icon="home"
+            Route="HomePage"/>
+
+        <ShellContent 
+            Title="Cart"
+            ContentTemplate="{DataTemplate pages:CartPage}"
+            Icon="cart"
+            Route="CartPage"/>
+
+        <ShellContent 
+            Title="Profile"
+            ContentTemplate="{DataTemplate pages:ProfilePage}"
+            Icon="profile"
+            Route="ProfilePage"/>
+    </TabBar>
+
+
+</Shell>
